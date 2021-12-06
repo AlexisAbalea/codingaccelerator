@@ -9,13 +9,8 @@ if (!argument) {
 // l'escalier
 const escalier = (marche) => {
     for (i=0; i < marche; i++) {
-        let escalier = '';
-        for (j=0; j < marche; j++) {
-            const debutMarche = marche - i - 1;
-            // On incremente l'escalier d'un espace ou d'un #
-            escalier = debutMarche > j ? escalier+=' ' : escalier+='#';
-        }
-        console.log(escalier);
+        const space = marche - i;
+        console.log(' '.repeat(space) + '#'.repeat(i + 1));
     }
 }
 
