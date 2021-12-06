@@ -1,5 +1,5 @@
 // On récupere l'argument
-let argument = process.argv.slice(2)[0];
+const argument = process.argv[2];
 
 // check argument existant
 if (!argument) {
@@ -15,4 +15,4 @@ const escalier = (marche) => {
 }
 
 // On lance la fonction
-const resultat = escalier(argument);
+escalier(argument);
