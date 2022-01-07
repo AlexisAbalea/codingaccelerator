@@ -1,7 +1,7 @@
 const argument = process.argv[2];
 
 // check argument existant
-if (!argument && argument.length === 1) {
+if (!argument || !isLetter(argument)) {
     console.log('Merci de saisir une lettre.');
 } else {
     const alphabet = (start) => {
@@ -16,5 +16,9 @@ if (!argument && argument.length === 1) {
         console.log(resultat);
     }
     alphabet(argument);
+}
+
+function isLetter(str) {
+    return str.length === 1 && str.match(/[a-z]/i);
 }
 
